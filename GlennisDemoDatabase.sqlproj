@@ -79,4 +79,7 @@
     <None Include="bin\Debug\GlennisDemoDatabase.dll" />
     <None Include="bin\Debug\GlennisDemoDatabase.pdb" />
   </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="GlennisDemoDatabase.refactorlog" />
+  </ItemGroup>
 </Project>
