@@ -44,5 +44,5 @@ steps:
     SqlPassword: 'dba@1234'
     deployType: 'DacpacTask'
     DeploymentAction: 'Publish'
-    DacpacFile: 'Snapshots\*.dacpac'
+    DacpacFile: 'bin\debug\*.dacpac'
     IpDetectionMethod: 'AutoDetect'
