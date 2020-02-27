@@ -48,7 +48,7 @@ steps:
     IpDetectionMethod: 'AutoDetect'
 
 
-- task: SqlAzureDacpacDeployment@2
+- task: SqlAzureDacpacDeployment@1
   inputs:
     azureSubscription: 'Microsoft Partner Network (93d79f38-7119-4367-b17e-4a8b7195561d)'
     AuthenticationType: 'server'
