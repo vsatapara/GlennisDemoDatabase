@@ -65,9 +65,18 @@
     <Folder Include="Security\" />
     <Folder Include="SalesLT\" />
     <Folder Include="SalesLT\Sequences\" />
+    <Folder Include="Snapshots" />
+    <Folder Include="bin" />
+    <Folder Include="bin\Debug" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Employee.sql" />
     <Build Include="dbo\Tables\TestTabel.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Snapshots\GlennisDemoDatabase_20200227_13-31-59.dacpac" />
+    <None Include="bin\Debug\GlennisDemoDatabase.dacpac" />
+    <None Include="bin\Debug\GlennisDemoDatabase.dll" />
+    <None Include="bin\Debug\GlennisDemoDatabase.pdb" />
   </ItemGroup>
 </Project>
