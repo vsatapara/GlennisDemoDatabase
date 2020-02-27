@@ -4,7 +4,6 @@
     [Column1] INT NULL, 
     [NewColumn1] NCHAR(10) NULL, 
     [NewColumn2] INT NULL, 
-    [NewColumn3] NCHAR(10) NULL, 
     PRIMARY KEY CLUSTERED ([TestTabelId] ASC)
 );
 

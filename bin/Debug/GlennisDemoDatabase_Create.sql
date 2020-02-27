@@ -86,8 +86,20 @@ CREATE TABLE [dbo].[TestTabel] (
     [Column1]     INT        NULL,
     [NewColumn1]  NCHAR (10) NULL,
     [NewColumn2]  INT        NULL,
-    [NewColumn3]  NCHAR (10) NULL,
     PRIMARY KEY CLUSTERED ([TestTabelId] ASC)
+);
+
+
+GO
+PRINT N'Creating [dbo].[Table1]...';
+
+
+GO
+CREATE TABLE [dbo].[Table1] (
+    [Id]      INT          NOT NULL,
+    [name]    VARCHAR (50) NULL,
+    [address] NCHAR (10)   NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
 
