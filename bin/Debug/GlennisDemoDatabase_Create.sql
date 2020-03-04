@@ -63,15 +63,15 @@ BEGIN
 END
 GO
 /* Please run the below section of statements against the database name that the above [$(DatabaseName)] variable is assigned to. */
-PRINT N'Creating [dbo].[Employee]...';
+PRINT N'Creating [dbo].[Table1]...';
 
 
 GO
-CREATE TABLE [dbo].[Employee] (
-    [EmployeeId] INT           IDENTITY (1, 1) NOT NULL,
-    [Name]       VARCHAR (50)  NULL,
-    [Address]    VARCHAR (MAX) NULL,
-    CONSTRAINT [PK_Employee] PRIMARY KEY CLUSTERED ([EmployeeId] ASC)
+CREATE TABLE [dbo].[Table1] (
+    [Id]      INT          NOT NULL,
+    [name]    VARCHAR (50) NULL,
+    [address] NCHAR (10)   NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
 
@@ -91,14 +91,27 @@ CREATE TABLE [dbo].[TestTabel] (
 
 
 GO
-PRINT N'Creating [dbo].[Table1]...';
+PRINT N'Creating [dbo].[Employee]...';
 
 
 GO
-CREATE TABLE [dbo].[Table1] (
-    [Id]      INT          NOT NULL,
-    [name]    VARCHAR (50) NULL,
-    [address] NCHAR (10)   NULL,
+CREATE TABLE [dbo].[Employee] (
+    [EmployeeId] INT           IDENTITY (1, 1) NOT NULL,
+    [Name]       VARCHAR (50)  NULL,
+    [Address]    VARCHAR (MAX) NULL,
+    CONSTRAINT [PK_Employee] PRIMARY KEY CLUSTERED ([EmployeeId] ASC)
+);
+
+
+GO
+PRINT N'Creating [dbo].[Table2]...';
+
+
+GO
+CREATE TABLE [dbo].[Table2] (
+    [Id]      INT        NOT NULL,
+    [name]    NCHAR (10) NULL,
+    [address] NCHAR (10) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
@@ -114,6 +127,20 @@ GO
 IF NOT EXISTS (SELECT OperationKey FROM [dbo].[__RefactorLog] WHERE OperationKey = '6fa99e2d-90eb-4877-915e-73fdd6969805')
 INSERT INTO [dbo].[__RefactorLog] (OperationKey) values ('6fa99e2d-90eb-4877-915e-73fdd6969805')
 
+GO
+
+GO
+/*
+Post-Deployment Script Template							
+--------------------------------------------------------------------------------------
+ This file contains SQL statements that will be appended to the build script.		
+ Use SQLCMD syntax to include a file in the post-deployment script.			
+ Example:      :r .\myfile.sql								
+ Use SQLCMD syntax to reference a variable in the post-deployment script.		
+ Example:      :setvar TableName MyTable							
+               SELECT * FROM [$(TableName)]					
+--------------------------------------------------------------------------------------
+*/
 GO
 
 GO

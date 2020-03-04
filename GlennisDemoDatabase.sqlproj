@@ -73,6 +73,7 @@
     <Build Include="dbo\Tables\Employee.sql" />
     <Build Include="dbo\Tables\TestTabel.sql" />
     <Build Include="dbo\Tables\Table1.sql" />
+    <Build Include="dbo\Tables\Table2.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Snapshots\GlennisDemoDatabase_20200227_13-31-59.dacpac" />
@@ -82,5 +83,8 @@
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="GlennisDemoDatabase.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment1.sql" />
   </ItemGroup>
 </Project>
