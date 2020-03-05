@@ -1,0 +1,52 @@
+# ASP.NET Core (.NET Framework)
+# Build and test ASP.NET Core projects targeting the full .NET Framework.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+
+
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: SqlAzureDacpacDeployment@1
+  inputs:
+    azureSubscription: 'Microsoft Partner Network (93d79f38-7119-4367-b17e-4a8b7195561d)'
+    AuthenticationType: 'server'
+    ServerName: 'artoolsqlserver.database.windows.net'
+    DatabaseName: 'GlennisDemoDatabase'
+    SqlUsername: 'msdba'
+    SqlPassword: 'dba@1234'
+    deployType: 'DacpacTask'
+    DeploymentAction: 'Publish'
+    DacpacFile: 'bin\debug\*.dacpac'
+    IpDetectionMethod: 'AutoDetect'
+
+
+- task: SqlAzureDacpacDeployment@1
+  inputs:
+    azureSubscription: 'Microsoft Partner Network (93d79f38-7119-4367-b17e-4a8b7195561d)'
+    AuthenticationType: 'server'
+    ServerName: 'artoolsqlserver.database.windows.net'
+    DatabaseName: 'GlennisDemoDatabase2'
+    SqlUsername: 'msdba'
+    SqlPassword: 'dba@1234'
+    deployType: 'DacpacTask'
+    DeploymentAction: 'Publish'
+    DacpacFile: 'bin\debug\*.dacpac'
+    IpDetectionMethod: 'AutoDetect'
