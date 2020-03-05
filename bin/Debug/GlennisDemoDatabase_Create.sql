@@ -76,21 +76,6 @@ CREATE TABLE [dbo].[Table1] (
 
 
 GO
-PRINT N'Creating [dbo].[TestTabel]...';
-
-
-GO
-CREATE TABLE [dbo].[TestTabel] (
-    [TestTabelId] INT        NOT NULL,
-    [TestName]    NCHAR (10) NULL,
-    [Column1]     INT        NULL,
-    [NewColumn1]  NCHAR (10) NULL,
-    [NewColumn2]  INT        NULL,
-    PRIMARY KEY CLUSTERED ([TestTabelId] ASC)
-);
-
-
-GO
 PRINT N'Creating [dbo].[Employee]...';
 
 
@@ -112,6 +97,19 @@ CREATE TABLE [dbo].[Table2] (
     [Id]      INT        NOT NULL,
     [name]    NCHAR (10) NULL,
     [address] NCHAR (10) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+GO
+PRINT N'Creating [dbo].[Table3]...';
+
+
+GO
+CREATE TABLE [dbo].[Table3] (
+    [Id]         INT        NOT NULL,
+    [testField]  NCHAR (10) NULL,
+    [testField2] INT        NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
