@@ -29,11 +29,6 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
 - task: SqlAzureDacpacDeployment@1
   inputs:
     azureSubscription: 'Microsoft Partner Network (93d79f38-7119-4367-b17e-4a8b7195561d)'
