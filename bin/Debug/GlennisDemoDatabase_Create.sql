@@ -102,19 +102,6 @@ CREATE TABLE [dbo].[Table2] (
 
 
 GO
-PRINT N'Creating [dbo].[Table3]...';
-
-
-GO
-CREATE TABLE [dbo].[Table3] (
-    [Id]         INT        NOT NULL,
-    [testField]  NCHAR (10) NULL,
-    [testField2] INT        NULL,
-    PRIMARY KEY CLUSTERED ([Id] ASC)
-);
-
-
-GO
 PRINT N'Creating [dbo].[Table4]...';
 
 
