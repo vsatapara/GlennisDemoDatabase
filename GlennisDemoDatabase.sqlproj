@@ -83,6 +83,7 @@
     <None Include="bin\Debug\GlennisDemoDatabase.dacpac" />
     <None Include="bin\Debug\GlennisDemoDatabase.dll" />
     <None Include="bin\Debug\GlennisDemoDatabase.pdb" />
+    <None Include="azure-pipelines.yml" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="GlennisDemoDatabase.refactorlog" />
