@@ -146,6 +146,20 @@ CREATE TABLE [dbo].[Table6] (
 
 
 GO
+PRINT N'Creating [dbo].[Table7]...';
+
+
+GO
+CREATE TABLE [dbo].[Table7] (
+    [Id]     INT          NOT NULL,
+    [field1] NCHAR (10)   NULL,
+    [field2] NCHAR (10)   NULL,
+    [field3] VARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+GO
 -- Refactoring step to update target server with deployed transaction logs
 
 IF OBJECT_ID(N'dbo.__RefactorLog') IS NULL
