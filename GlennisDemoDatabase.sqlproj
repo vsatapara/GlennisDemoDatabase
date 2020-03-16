@@ -78,6 +78,7 @@
     <Build Include="dbo\Tables\Table6.sql" />
     <Build Include="dbo\Tables\Table7.sql" />
     <Build Include="dbo\Tables\Table8.sql" />
+    <Build Include="dbo\Tables\Table9.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Snapshots\GlennisDemoDatabase_20200227_13-31-59.dacpac" />

@@ -63,6 +63,90 @@ BEGIN
 END
 GO
 /* Please run the below section of statements against the database name that the above [$(DatabaseName)] variable is assigned to. */
+PRINT N'Creating [dbo].[Table8]...';
+
+
+GO
+CREATE TABLE [dbo].[Table8] (
+    [Id]     INT        NOT NULL,
+    [field1] NCHAR (10) NULL,
+    [field2] INT        NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+GO
+PRINT N'Creating [dbo].[Table7]...';
+
+
+GO
+CREATE TABLE [dbo].[Table7] (
+    [Id]     INT          NOT NULL,
+    [field1] NCHAR (10)   NULL,
+    [field2] NCHAR (10)   NULL,
+    [field3] VARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+GO
+PRINT N'Creating [dbo].[Table6]...';
+
+
+GO
+CREATE TABLE [dbo].[Table6] (
+    [Id]     INT        NOT NULL,
+    [field1] NCHAR (10) NULL,
+    [field2] NCHAR (10) NULL,
+    [field3] NCHAR (10) NULL,
+    [field4] INT        NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+GO
+PRINT N'Creating [dbo].[Table5]...';
+
+
+GO
+CREATE TABLE [dbo].[Table5] (
+    [Id]     INT        NOT NULL,
+    [field1] NCHAR (10) NULL,
+    [field2] INT        NULL,
+    [field3] BIT        NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+GO
+PRINT N'Creating [dbo].[Table4]...';
+
+
+GO
+CREATE TABLE [dbo].[Table4] (
+    [Id]     INT            NOT NULL,
+    [Field1] VARBINARY (50) NULL,
+    [Field2] NCHAR (10)     NULL,
+    [Field4] NVARCHAR (50)  NULL,
+    [Field5] BIT            NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+GO
+PRINT N'Creating [dbo].[Table2]...';
+
+
+GO
+CREATE TABLE [dbo].[Table2] (
+    [Id]      INT        NOT NULL,
+    [name]    NCHAR (10) NULL,
+    [address] NCHAR (10) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+GO
 PRINT N'Creating [dbo].[Table1]...';
 
 
@@ -89,82 +173,11 @@ CREATE TABLE [dbo].[Employee] (
 
 
 GO
-PRINT N'Creating [dbo].[Table2]...';
+PRINT N'Creating [dbo].[Table9]...';
 
 
 GO
-CREATE TABLE [dbo].[Table2] (
-    [Id]      INT        NOT NULL,
-    [name]    NCHAR (10) NULL,
-    [address] NCHAR (10) NULL,
-    PRIMARY KEY CLUSTERED ([Id] ASC)
-);
-
-
-GO
-PRINT N'Creating [dbo].[Table4]...';
-
-
-GO
-CREATE TABLE [dbo].[Table4] (
-    [Id]     INT            NOT NULL,
-    [Field1] VARBINARY (50) NULL,
-    [Field2] NCHAR (10)     NULL,
-    [Field4] NVARCHAR (50)  NULL,
-    [Field5] BIT            NULL,
-    PRIMARY KEY CLUSTERED ([Id] ASC)
-);
-
-
-GO
-PRINT N'Creating [dbo].[Table5]...';
-
-
-GO
-CREATE TABLE [dbo].[Table5] (
-    [Id]     INT        NOT NULL,
-    [field1] NCHAR (10) NULL,
-    [field2] INT        NULL,
-    [field3] BIT        NULL,
-    PRIMARY KEY CLUSTERED ([Id] ASC)
-);
-
-
-GO
-PRINT N'Creating [dbo].[Table6]...';
-
-
-GO
-CREATE TABLE [dbo].[Table6] (
-    [Id]     INT        NOT NULL,
-    [field1] NCHAR (10) NULL,
-    [field2] NCHAR (10) NULL,
-    [field3] NCHAR (10) NULL,
-    [field4] INT        NULL,
-    PRIMARY KEY CLUSTERED ([Id] ASC)
-);
-
-
-GO
-PRINT N'Creating [dbo].[Table7]...';
-
-
-GO
-CREATE TABLE [dbo].[Table7] (
-    [Id]     INT          NOT NULL,
-    [field1] NCHAR (10)   NULL,
-    [field2] NCHAR (10)   NULL,
-    [field3] VARCHAR (50) NULL,
-    PRIMARY KEY CLUSTERED ([Id] ASC)
-);
-
-
-GO
-PRINT N'Creating [dbo].[Table8]...';
-
-
-GO
-CREATE TABLE [dbo].[Table8] (
+CREATE TABLE [dbo].[Table9] (
     [Id]     INT        NOT NULL,
     [field1] NCHAR (10) NULL,
     [field2] INT        NULL,
