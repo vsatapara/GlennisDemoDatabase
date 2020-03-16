@@ -68,3 +68,6 @@ steps:
     deployType: 'DacpacTask'
     DeploymentAction: 'Publish'
     DacpacFile: 'bin\debug\*.dacpac'
+
+
+

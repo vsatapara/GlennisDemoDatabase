@@ -178,9 +178,9 @@ PRINT N'Creating [dbo].[Table9]...';
 
 GO
 CREATE TABLE [dbo].[Table9] (
-    [Id]     INT        NOT NULL,
-    [field1] NCHAR (10) NULL,
-    [field2] INT        NULL,
+    [Id]        INT        NOT NULL,
+    [field1]    NCHAR (10) NULL,
+    [NewField3] INT        NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
