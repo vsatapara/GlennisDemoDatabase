@@ -196,6 +196,7 @@ CREATE TABLE [dbo].[Table10] (
     [field]  NCHAR (10) NULL,
     [field1] NCHAR (10) NULL,
     [field2] INT        NULL,
+    [field3] INT        NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
